@@ -12,7 +12,6 @@ function calculateTriangle(){
 
     // calculate triangle area
     const area = 0.5 * base * height;
-    console.log(area);
 
     // display triangle area
     const triangleAreaSpan = document.getElementById("triangle-area");
@@ -21,4 +20,29 @@ function calculateTriangle(){
     // empty input field
     triangleBaseInput.value = "";
     triangleHeightInput.value = "";
+}
+
+// Rectangle part Script
+function calculateRectangle(){
+    // rectangle width value
+    const rectangleWidthInput = document.getElementById("rectangle-width");
+    const rectangleWidthText = rectangleWidthInput.value;
+    const rectangleWidth = parseFloat(rectangleWidthText);
+    
+    // rectangle length value
+    const rectangleLengthInput = document.getElementById("rectangle-length");
+    const rectangleLengthText = rectangleLengthInput.value;
+    const rectangleLength = parseFloat(rectangleLengthText);
+
+    // calculate rectangle area
+    const area = rectangleWidth * rectangleLength;
+    console.log(area);
+
+    // display rectangle area
+    const rectangleAreaSpan = document.getElementById("rectangle-area");
+    rectangleAreaSpan.innerText = area;
+
+    // empty input field
+    rectangleWidthInput.value = "";
+    rectangleLengthInput.value = "";
 }
