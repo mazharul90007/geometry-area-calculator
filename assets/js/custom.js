@@ -46,3 +46,28 @@ function calculateRectangle(){
     rectangleWidthInput.value = "";
     rectangleLengthInput.value = "";
 }
+
+
+// Common Function
+function calculateParallelogramArea(){
+    const base = getInputById("parallelogramBase");
+    const height = getInputById("parallelogramHeight");
+
+    const area = base * height;
+    // display parallelogram area
+    setInnerTextById('parallelogram-area', area);
+
+
+
+}
+
+function getInputById(inputId){
+    const inputTextId = document.getElementById(inputId);
+    const inputText = inputTextId.value;
+    const input = parseFloat(inputText);
+    return input;
+}
+function setInnerTextById(elementId, area){
+    const element = document.getElementById(elementId);
+    element.innerText = area;
+}

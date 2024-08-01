@@ -21,7 +21,7 @@
                 <!-- Triangle card -->
                 <div class="w-full p-8 card bg-base-100 w-96 shadow-xl">
                     <figure class="rounded-none">
-                        <img src="assets/images/triangle.png" alt="Triangle" />
+                        <img class="h-40 w-auto" src="assets/images/triangle.png" alt="Triangle" />
                     </figure>
                     <div class="card-body p-0 items-center">
                         <h2 class="card-title">Triangle</h2>
@@ -51,7 +51,7 @@
                 <!-- Rectangle card -->
                 <div class="w-full card bg-base-100 w-96 shadow-xl p-8">
                     <figure class="rounded-none">
-                        <img src="assets/images/rectangle.png" alt="Rectangle"/>
+                        <img class="h-40 w-auto" src="assets/images/rectangle.png" alt="Rectangle"/>
                     </figure>
                     <div class="card-body p-0 items-center">
                         <h2 class="card-title">Rectangle</h2>
@@ -81,32 +81,37 @@
                 <!-- Parallelogram card -->
                 <div class="w-full p-8 card bg-base-100 w-96 shadow-xl">
                     <figure class="rounded-none">
-                        <img src="assets/images/parallelogram.png" />
+                        <img class="h-40 w-auto" src="assets/images/parallelogram.png" />
                     </figure>
                     <div class="card-body p-0 items-center">
                         <h2 class="card-title">Parallelogram</h2>
                         <p>Area (A) = b x h</p>
                         <div class="grid gap-2 grid-cols-2">
+                            <!-- parallelogram base -->
                             <div class="flex items-center">
-                                <input class="w-full bg-gray-200 text-black text-xl p-2 rounded-md mr-1" type="text"
+                                <input id="parallelogramBase" class="w-full bg-gray-200 text-black text-xl p-2 rounded-md mr-1" type="text"
                                     placeholder="b">
                                 <span>cm</span>
                             </div>
+                            <!-- parallelogram height -->
                             <div class="flex items-center">
-                                <input class="w-full bg-gray-200 text-black text-xl p-2 rounded-md mr-1"
+                                <input id="parallelogramHeight" class="w-full bg-gray-200 text-black text-xl p-2 rounded-md mr-1"
                                     placeholder="h">
                                 <span>cm</span>
                             </div>
                         </div>
+                        <p class="text-2xl">
+                            Area: <span id="parallelogram-area"></span> cm<sup>2</sup>
+                        </p>
                         <div class="card-actions w-full">
-                            <button class="btn btn-primary w-full" onclick="calculateTriangle()">Calculate</button>
+                            <button class="btn btn-primary w-full" onclick="calculateParallelogramArea()">Calculate</button>
                         </div>
                     </div>
                 </div>
                 <!-- Rombus card -->
                 <div class="w-full p-8 card bg-base-100 w-96 shadow-xl">
                     <figure class="rounded-none">
-                        <img src="assets/images/rhombus.png" />
+                        <img class="h-40 w-auto" src="assets/images/rhombus.png" />
                     </figure>
                     <div class="card-body p-0 items-center">
                         <h2 class="card-title">Rombus</h2>
@@ -123,6 +128,9 @@
                                 <span>cm</span>
                             </div>
                         </div>
+                        <p class="text-2xl">
+                            Area: <span id="rombus-area"></span> cm<sup>2</sup>
+                        </p>
                         <div class="card-actions w-full">
                             <button class="btn btn-primary w-full" onclick="calculateTriangle()">Calculate</button>
                         </div>
